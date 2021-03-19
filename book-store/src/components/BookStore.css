@@ -1,0 +1,32 @@
+.BookStore {
+    border: 1px solid #e25e29;
+    padding: 8px;
+    margin-bottom: 16px;
+}
+
+.BookStore-layout {
+    display: flex;
+}
+
+.BookStore-layout--spaced {
+    justify-content: space-between;
+}
+
+.BookStore-image img {
+    border-radius: 50%;
+    height: 125px;
+    object-fit: cover;
+    vertical-align: top;
+    width: 125px;
+}
+
+.BookStore-data {
+    width: 100%;
+}
+
+.BookStore-dateAndUrl {
+}
+
+.BookStore-countryFlag img {
+    vertical-align: middle;
+}

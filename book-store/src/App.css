@@ -1,0 +1,28 @@
+.App {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0;
+    width: 50em;
+}
+
+.App-header {
+    color: #e25e29;
+    margin: 8px;
+    padding: 0;
+}
+
+.App-logo {
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.App-main {
+    flex: 1;
+    overflow: auto;
+}
+
+.App-footer {
+    text-align: center;
+}
