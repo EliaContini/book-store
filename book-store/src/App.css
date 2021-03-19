@@ -1,3 +1,10 @@
+/**
+ * App component CSS
+ *
+ * Author: Elia Contini <http://elia.contini.page/>
+ *
+ */
+
 .App {
     display: flex;
     flex-direction: column;

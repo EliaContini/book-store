@@ -27,6 +27,17 @@ function App() {
             });
     }, []);
 
+    const handleChange = (bookStore) => {
+        data.update(bookStore).then(
+            data
+                .get()
+                .then(data.prepare)
+                .then((response) => {
+                    setBookStores(response);
+                })
+        );
+    };
+
     return (
         <div className="App">
             <header className="App-header">
@@ -42,7 +53,7 @@ function App() {
                 </h1>
             </header>
             <main className="App-main">
-                <BookStores bookStores={bookStores} />
+                <BookStores bookStores={bookStores} onChange={handleChange} />
             </main>
             <footer className="App-footer">&copy; 2021 Elia Contini</footer>
         </div>

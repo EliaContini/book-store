@@ -12,11 +12,16 @@ import "./BookStores.css";
 
 const BookStores = (props) => {
     const bookStores = props.bookStores;
+    const handleChange = props.onChange;
 
     return (
         <ol className="BookStores">
             {bookStores.map((bookStore) => (
-                <BookStore bookStore={bookStore} key={bookStore.id} />
+                <BookStore
+                    bookStore={bookStore}
+                    onChange={handleChange}
+                    key={bookStore.id}
+                />
             ))}
         </ol>
     );

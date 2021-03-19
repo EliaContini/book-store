@@ -33,6 +33,12 @@ const BookStore = (props) => {
     const websiteLink = bookStore.website;
     const website = websiteLink.replace(/^http:\/\/|https:\/\//g, "");
 
+    const handleChangeRating = (value) => {
+        let bookStoreUpdated = { ...bookStore, rating: value };
+
+        props.onChange(bookStoreUpdated);
+    };
+
     return (
         <li className="BookStore">
             <div className="BookStore-data BookStore-layout">
@@ -45,7 +51,10 @@ const BookStore = (props) => {
                             <h2>{name}</h2>
                         </div>
                         <div className="BookStore-rating">
-                            <Rating rating={rating} />
+                            <Rating
+                                onChange={handleChangeRating}
+                                rating={rating}
+                            />
                         </div>
                     </div>
                     <BestSellers books={bestSellers} />

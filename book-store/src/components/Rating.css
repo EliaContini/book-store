@@ -1,8 +1,16 @@
+/**
+ * Rating component CSS
+ *
+ * Author: Elia Contini <http://elia.contini.page/>
+ *
+ */
+
 .Rating {
 }
 
 .Rating-start {
     color: #d3d3d3;
+    cursor: pointer;
 }
 
 .Rating-start-isOn {

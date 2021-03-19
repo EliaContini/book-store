@@ -1,7 +1,7 @@
 /**
  * Flags Client
  *
- * @returns a querable store
+ * @returns a querable store for country flags
  */
 const flags = () => {
     const url = "https://restcountries.eu/rest/v2/alpha/";

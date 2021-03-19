@@ -15,28 +15,35 @@ const Rating = (props) => {
     const maxRating = 5;
     const rating = props.rating;
 
-    let content = [];
+    const handleChange = (value) => {
+        props.onChange(value);
+    };
+
+    let stars = [];
     for (var i = 1; i <= maxRating; i++) {
+        const index = i;
         if (i <= rating) {
-            content.push(
+            stars.push(
                 <FontAwesomeIcon
                     icon={faStar}
-                    className="Rating-start-isOn"
+                    className="Rating-start Rating-start-isOn"
+                    onClick={() => handleChange(index)}
                     key={i}
                 />
             );
         } else {
-            content.push(
+            stars.push(
                 <FontAwesomeIcon
                     icon={faStar}
                     className="Rating-start"
+                    onClick={() => handleChange(index)}
                     key={i}
                 />
             );
         }
     }
 
-    return <div className="Rating">{content}</div>;
+    return <div className="Rating">{stars}</div>;
 };
 
 export default Rating;

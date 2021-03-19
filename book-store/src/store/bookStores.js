@@ -34,9 +34,15 @@ const bookStores = (params) => {
 
     const flagsStore = flags();
 
+    const fetchOptions = {
+        headers: {
+            "Content-Type": "application/vnd.api+json",
+        },
+    };
+
     return {
         get: async (params) => {
-            const response = await fetch(url + "stores");
+            const response = await fetch(url + "stores", fetchOptions);
 
             return response.json();
         },
@@ -145,6 +151,33 @@ const bookStores = (params) => {
             }
 
             return prepared;
+        },
+        update: async (bookStore) => {
+            //
+            // it is specific for rating only
+            //
+            var payload = {
+                data: {
+                    type: "stores",
+                    id: bookStore.id,
+                    attributes: {
+                        rating: bookStore.rating,
+                    },
+                },
+            };
+
+            const fetchOptionsUpdate = {
+                ...fetchOptions,
+                body: JSON.stringify(payload),
+                method: "PATCH",
+            };
+
+            const response = await fetch(
+                url + "stores/" + bookStore.id,
+                fetchOptionsUpdate
+            );
+
+            return response.json();
         },
     };
 };
