@@ -12,7 +12,10 @@ const flags = () => {
 
             const payload = await response.json();
 
-            return payload.flag;
+            return {
+                name: payload.name,
+                url: payload.flag,
+            };
         },
     };
 };

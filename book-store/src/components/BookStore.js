@@ -55,8 +55,8 @@ const BookStore = (props) => {
                 </div>
                 <div className="BookStore-countryFlag">
                     <img
-                        src={countryFlag}
-                        alt="Flag of"
+                        src={countryFlag.url}
+                        alt={"Flag of " + countryFlag.name}
                         height="12"
                         width="24"
                     />
