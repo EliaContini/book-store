@@ -37,6 +37,10 @@
     padding: 0;
 }
 
+.BookStore-rating {
+    margin: 0 0 16px 0;
+}
+
 .BookStore-meta {
 }
 

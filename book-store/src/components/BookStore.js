@@ -3,10 +3,11 @@
  *
  * Author: Elia Contini <http://elia.contini.page/>
  *
- * Renders a book store
+ * Renders book store information
  */
 
 import BestSellers from "./BestSellers";
+import Rating from "./Rating";
 
 import "./BookStore.css";
 
@@ -43,7 +44,9 @@ const BookStore = (props) => {
                         <div className="BookStore-name">
                             <h2>{name}</h2>
                         </div>
-                        <div>Rating: {rating}</div>
+                        <div className="BookStore-rating">
+                            <Rating rating={rating} />
+                        </div>
                     </div>
                     <BestSellers books={bestSellers} />
                 </div>
