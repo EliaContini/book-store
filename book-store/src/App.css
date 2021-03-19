@@ -14,8 +14,14 @@
 }
 
 .App-header {
+    border-bottom: 2px solid #e25e29;
     color: #e25e29;
-    margin: 8px;
+    margin: 0 0 8px 0;
+    padding: 0;
+}
+
+.App-header h1 {
+    margin: 16px 0;
     padding: 0;
 }
 
@@ -30,6 +36,7 @@
 }
 
 .App-footer {
+    border-top: 2px solid #e25e29;
     padding: 16px 0;
     text-align: center;
 }
