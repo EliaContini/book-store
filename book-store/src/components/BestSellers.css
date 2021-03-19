@@ -3,3 +3,29 @@
     border-collapse: collapse;
     width: 100%;
 }
+
+.BestSellers-a11y {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.BestSellers-title {
+}
+
+.BestSellers-author {
+    width: 30%;
+}
+
+.BestSellers th {
+    border-bottom: 2px solid #d3d3d3;
+    padding: 8px 0;
+}
+
+.BestSellers td {
+    border-bottom: 1px solid #d3d3d3;
+    padding: 8px 0;
+}

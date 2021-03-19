@@ -8,25 +8,40 @@
     display: flex;
 }
 
-.BookStore-layout--spaced {
+.BookStore-layout--spaceBetween {
+    align-items: center;
     justify-content: space-between;
+}
+
+.BookStore-data {
+    margin-bottom: 16px;
+}
+
+.BookStore-image {
+    padding-right: 16px;
 }
 
 .BookStore-image img {
     border-radius: 50%;
     height: 125px;
     object-fit: cover;
-    vertical-align: top;
     width: 125px;
 }
 
-.BookStore-data {
+.BookStore-analytics {
     width: 100%;
+}
+
+.BookStore-name h2 {
+    margin: 0 0 16px 0;
+    padding: 0;
+}
+
+.BookStore-meta {
 }
 
 .BookStore-dateAndUrl {
 }
 
-.BookStore-countryFlag img {
-    vertical-align: middle;
+.BookStore-countryFlag {
 }

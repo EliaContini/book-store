@@ -3,7 +3,7 @@
  *
  * Author: Elia Contini <http://elia.contini.page/>
  *
- * Renders a book stores
+ * Renders a book store
  */
 
 import BestSellers from "./BestSellers";
@@ -15,20 +15,31 @@ const BookStore = (props) => {
 
     const bestSellers = bookStore.bestSellers;
     const countryFlag = bookStore.countryFlag;
-    const establishmentDate = bookStore.establishmentDate;
+
+    const date = new Date(bookStore.establishmentDate);
+    const options = {
+        year: "2-digit",
+        month: "2-digit",
+        day: "2-digit",
+    };
+    const establishmentDate = new Intl.DateTimeFormat("ch", options)
+        .format(date)
+        .replace(/\//g, ".");
+
     const imageSrc = bookStore.storeImage;
     const name = bookStore.name;
     const rating = bookStore.rating;
-    const website = bookStore.website;
+    const websiteLink = bookStore.website;
+    const website = websiteLink.replace(/^http:\/\/|https:\/\//g, "");
 
     return (
         <li className="BookStore">
-            <div className="BookStore-layout">
+            <div className="BookStore-data BookStore-layout">
                 <div className="BookStore-image">
                     <img src={imageSrc} alt="{name}" />
                 </div>
-                <div className="BookStore-data">
-                    <div className=" BookStore-layout BookStore-layout--spaced">
+                <div className="BookStore-analytics">
+                    <div className=" BookStore-layout BookStore-layout--spaceBetween">
                         <div className="BookStore-name">
                             <h2>{name}</h2>
                         </div>
@@ -37,9 +48,10 @@ const BookStore = (props) => {
                     <BestSellers books={bestSellers} />
                 </div>
             </div>
-            <div className="BookStore-layout BookStore-layout--spaced">
+
+            <div className="BookStore-meta BookStore-layout BookStore-layout--spaceBetween">
                 <div className="BookStore-dateAndUrl">
-                    {establishmentDate} - {website}
+                    {establishmentDate} - <a href={websiteLink}>{website}</a>
                 </div>
                 <div className="BookStore-countryFlag">
                     <img

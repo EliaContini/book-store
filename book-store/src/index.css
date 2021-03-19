@@ -14,3 +14,7 @@ body {
     -moz-osx-font-smoothing: grayscale;
     font-size: 100%;
 }
+
+a:link, a:visited {
+    text-decoration: none;
+}

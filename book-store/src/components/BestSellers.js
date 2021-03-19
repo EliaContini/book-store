@@ -17,23 +17,22 @@ const BestSellers = (props) => {
                 <tr>
                     <th colSpan="2">Best-selling books</th>
                 </tr>
-                <tr>
-                    <th>Title</th>
-                    <th>Author</th>
-                    <th>Copies sold</th>
+                <tr className="BestSellers-a11y">
+                    <th className="BestSellers-title">Title</th>
+                    <th className="BestSellers-author">Author</th>
                 </tr>
             </thead>
             <tbody>
                 {books.length === 0 ? (
                     <tr>
                         <td>No data available</td>
+                        <td></td>
                     </tr>
                 ) : (
                     books.map((book) => (
                         <tr key={book.id}>
                             <td>{book.name}</td>
                             <td>{book.author}</td>
-                            <td>{book.copiesSold}</td>
                         </tr>
                     ))
                 )}

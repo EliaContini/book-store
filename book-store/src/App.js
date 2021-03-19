@@ -23,7 +23,6 @@ function App() {
         data.get()
             .then(data.prepare)
             .then((response) => {
-                console.log(response);
                 setBookStores(response);
             });
     }, []);
@@ -32,8 +31,14 @@ function App() {
         <div className="App">
             <header className="App-header">
                 <h1>
-                    <img className="App-logo" src={logo} height="48" width="48" />
-                    Book store best sellers
+                    <img
+                        className="App-logo"
+                        src={logo}
+                        height="48"
+                        width="48"
+                        alt="Logo"
+                    />
+                    Book stores - best sellers
                 </h1>
             </header>
             <main className="App-main">

@@ -7,6 +7,12 @@
     width: 50em;
 }
 
+@media screen and (max-width: 756px) {
+    .App {
+        width: 100%;
+    }
+}
+
 .App-header {
     color: #e25e29;
     margin: 8px;
@@ -24,5 +30,6 @@
 }
 
 .App-footer {
+    padding: 16px 0;
     text-align: center;
 }

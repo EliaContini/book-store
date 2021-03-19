@@ -34,8 +34,6 @@ const bookStores = (params) => {
 
     const flagsStore = flags();
 
-    console.log("Store init: OK");
-
     return {
         get: async (params) => {
             const response = await fetch(url + "stores");
